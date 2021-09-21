@@ -1,4 +1,4 @@
-import { MigrationInterface, PrimaryColumn, QueryRunner, Table } from "typeorm";
+import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
 export class CreateUsers1630796646014 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
@@ -22,10 +22,6 @@ export class CreateUsers1630796646014 implements MigrationInterface {
           {
             name: "username",
             type: "VARCHAR(255)",
-          },
-          {
-            name: "profile_pic",
-            type: "text",
           },
           {
             name: "isAdmin",

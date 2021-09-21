@@ -5,21 +5,21 @@ class ListArticlesService {
   async listAll() {
     const repositorie = getCustomRepository(ArticlesRepositories);
 
-    const users = await repositorie.find();
+    const articles = await repositorie.find();
 
-    return users;
+    return articles;
   }
 
   async listOne(id: string) {
     const repositorie = getCustomRepository(ArticlesRepositories);
 
-    let users = await repositorie.findOne({ id });
+    let articles = await repositorie.findOne({ id });
 
     if (!id) {
-      let users = await repositorie.find();
+      let articles = await repositorie.find();
     }
 
-    return users;
+    return articles;
   }
 }
 

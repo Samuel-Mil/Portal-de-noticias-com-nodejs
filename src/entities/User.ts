@@ -6,6 +6,8 @@ import {
   UpdateDateColumn,
 } from "typeorm";
 
+import { v4 as uuid } from "uuid";
+
 @Entity("users")
 class User {
   @PrimaryColumn()
@@ -25,6 +27,12 @@ class User {
 
   @Column()
   isAdmin: boolean;
+
+  constructor() {
+    if (!this.id) {
+      this.id = uuid();
+    }
+  }
 }
 
 export { User };
