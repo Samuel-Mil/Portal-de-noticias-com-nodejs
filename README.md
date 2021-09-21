@@ -1,7 +1,9 @@
-# Awesome Project Build with TypeORM
+# Portal de notícias com node
 
-Steps to run this project:
+## How to use
 
-1. Run `npm i` command
-2. Setup database settings inside `ormconfig.json` file
-3. Run `npm start` command
+```
+yarn
+yarn typeorm migration:run
+yarn dev
+```
