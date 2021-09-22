@@ -34,6 +34,6 @@ yarn dev
 
 #
 
-Não fiz esse projeto para fins comerciais mas sim para estudo e desenvolvimento das minhas abilidades como programador.
+Não fiz esse projeto para fins comerciais mas sim para estudo e desenvolvimento das minhas habilidades como programador.
 
 Por favor se for usar esse codigo dar o devido crédito
