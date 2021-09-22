@@ -10,9 +10,9 @@ export async function ensureAdmin(
   const { user_id } = req;
   const usersRepositories = getCustomRepository(UsersRepositories);
 
-  const admin = await usersRepositories.findOne(user_id);
+  const { isAdmin } = await usersRepositories.findOne(user_id);
 
-  if (admin) {
+  if (isAdmin) {
     return next();
   }
 

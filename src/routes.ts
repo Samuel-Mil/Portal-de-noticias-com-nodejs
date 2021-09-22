@@ -29,7 +29,12 @@ const authenticateUserController = new AuthenticateUserController();
 
 routes.get("/articles", listArticlesController.listAll);
 routes.get("/articles/:id", listArticlesController.listOne);
-routes.post("/articles", ensureAuthenticated, createArticleController.handle);
+routes.post(
+  "/articles",
+  ensureAuthenticated,
+  ensureAdmin,
+  createArticleController.handle
+);
 routes.post(
   "/upload/:id",
   ensureAuthenticated,
